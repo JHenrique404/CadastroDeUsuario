@@ -1,11 +1,20 @@
 package projetociclodedesenvolvimento;
 public class TelaCadastro extends javax.swing.JFrame {
+    
+    public String nome;
+    public String email;
+    public String senha;
+    public String cpf;
+    public int sexo;
+    public String endereco;
+    public String cidade;
+    public int estado;
+    
+    
     public TelaCadastro() {
         initComponents();
     }
-
-
-    
+  
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -20,7 +29,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         txtCampoSenha = new javax.swing.JPasswordField();
         jLabel5 = new javax.swing.JLabel();
         txtCampoCPF = new javax.swing.JTextField();
-        txtEndereco = new javax.swing.JTextField();
+        txtCampoEndereco = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         txtCampoCidade = new javax.swing.JTextField();
@@ -28,8 +37,8 @@ public class TelaCadastro extends javax.swing.JFrame {
         btnSair = new javax.swing.JButton();
         btnCadastrar = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
-        txtSexo = new javax.swing.JComboBox();
-        jComboBox1 = new javax.swing.JComboBox();
+        txtCampoSexo = new javax.swing.JComboBox();
+        txtCampoEstado = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -72,9 +81,9 @@ public class TelaCadastro extends javax.swing.JFrame {
             }
         });
 
-        txtEndereco.addActionListener(new java.awt.event.ActionListener() {
+        txtCampoEndereco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtEnderecoActionPerformed(evt);
+                txtCampoEnderecoActionPerformed(evt);
             }
         });
 
@@ -112,19 +121,19 @@ public class TelaCadastro extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Sexo:");
 
-        txtSexo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Masculino", "Feminino", "Indefinido" }));
-        txtSexo.addItemListener(new java.awt.event.ItemListener() {
+        txtCampoSexo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Masculino", "Feminino", "Indefinido" }));
+        txtCampoSexo.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                txtSexoItemStateChanged(evt);
+                txtCampoSexoItemStateChanged(evt);
             }
         });
-        txtSexo.addActionListener(new java.awt.event.ActionListener() {
+        txtCampoSexo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtSexoActionPerformed(evt);
+                txtCampoSexoActionPerformed(evt);
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "AC", "AL", "AP", "AM", "BA", "CE", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO", "DF" }));
+        txtCampoEstado.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "AC", "AL", "AP", "AM", "BA", "CE", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO", "DF" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -140,7 +149,7 @@ public class TelaCadastro extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(jLabel3)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(txtEndereco)
+                        .addComponent(txtCampoEndereco)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel6)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -155,7 +164,7 @@ public class TelaCadastro extends javax.swing.JFrame {
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel9)
-                                        .addComponent(txtSexo, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(txtCampoSexo, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGap(51, 51, 51))))
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -171,7 +180,7 @@ public class TelaCadastro extends javax.swing.JFrame {
                                         .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addGap(95, 95, 95)
-                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addComponent(txtCampoEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addGap(23, 23, 23))
         );
         jPanel1Layout.setVerticalGroup(
@@ -198,11 +207,11 @@ public class TelaCadastro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtCampoCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtSexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtCampoSexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtCampoEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 19, Short.MAX_VALUE)
@@ -210,7 +219,7 @@ public class TelaCadastro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtCampoCidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtCampoEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(52, 52, 52)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnCadastrar, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
@@ -245,9 +254,9 @@ public class TelaCadastro extends javax.swing.JFrame {
    
     }//GEN-LAST:event_txtCampoCPFActionPerformed
 
-    private void txtEnderecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEnderecoActionPerformed
+    private void txtCampoEnderecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCampoEnderecoActionPerformed
         
-    }//GEN-LAST:event_txtEnderecoActionPerformed
+    }//GEN-LAST:event_txtCampoEnderecoActionPerformed
 
     private void txtCampoCidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCampoCidadeActionPerformed
       
@@ -259,18 +268,27 @@ public class TelaCadastro extends javax.swing.JFrame {
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
         
+        this.nome = txtCampoNome.getText();
+        this.email = txtCampoEmail.getText();
+        this.cpf = txtCampoCPF.getText();
+        this.sexo = txtCampoSexo.getSelectedIndex();
+        this.endereco = txtCampoEndereco.getText();
+        this.cidade = txtCampoCidade.getText();
+        this.estado = txtCampoEstado.getSelectedIndex();
         
+        
+
         
         
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
-    private void txtSexoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSexoActionPerformed
+    private void txtCampoSexoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCampoSexoActionPerformed
 
-    }//GEN-LAST:event_txtSexoActionPerformed
+    }//GEN-LAST:event_txtCampoSexoActionPerformed
 
-    private void txtSexoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_txtSexoItemStateChanged
+    private void txtCampoSexoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_txtCampoSexoItemStateChanged
 
-    }//GEN-LAST:event_txtSexoItemStateChanged
+    }//GEN-LAST:event_txtCampoSexoItemStateChanged
 
     
     public static void main(String args[]) {
@@ -284,7 +302,6 @@ public class TelaCadastro extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCadastrar;
     private javax.swing.JButton btnSair;
-    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -298,9 +315,10 @@ public class TelaCadastro extends javax.swing.JFrame {
     private javax.swing.JTextField txtCampoCPF;
     private javax.swing.JTextField txtCampoCidade;
     private javax.swing.JTextField txtCampoEmail;
+    private javax.swing.JTextField txtCampoEndereco;
+    private javax.swing.JComboBox txtCampoEstado;
     private javax.swing.JTextField txtCampoNome;
     private javax.swing.JPasswordField txtCampoSenha;
-    private javax.swing.JTextField txtEndereco;
-    private javax.swing.JComboBox txtSexo;
+    private javax.swing.JComboBox txtCampoSexo;
     // End of variables declaration//GEN-END:variables
 }
