@@ -9,11 +9,14 @@ public class TelaCadastro extends javax.swing.JFrame {
     public String endereco;
     public String cidade;
     public int estado;
+    Pessoa cliente = new Pessoa();
     
     
     public TelaCadastro() {
         initComponents();
     }
+    
+    
   
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -267,16 +270,16 @@ public class TelaCadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSairActionPerformed
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
+     
+        cliente.setNome(txtCampoNome.getText());
+        cliente.setEmail(txtCampoEmail.getText());
+        cliente.setCpf(txtCampoCPF.getText());
+        cliente.setSexo(txtCampoSexo.getSelectedItem().toString());
+        cliente.setEndereco(txtCampoEndereco.getText());
+        cliente.setCidade(txtCampoCidade.getText());
+        cliente.setEstado(txtCampoEstado.getSelectedItem().toString());
         
-        this.nome = txtCampoNome.getText();
-        this.email = txtCampoEmail.getText();
-        this.cpf = txtCampoCPF.getText();
-        this.sexo = txtCampoSexo.getSelectedIndex();
-        this.endereco = txtCampoEndereco.getText();
-        this.cidade = txtCampoCidade.getText();
-        this.estado = txtCampoEstado.getSelectedIndex();
-        
-        
+        System.out.println(cliente.getNome() + " teste");
 
         
         

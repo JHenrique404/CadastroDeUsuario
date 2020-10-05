@@ -11,16 +11,6 @@ public class Pessoa {
     private String cidade;
     private String estado;
 
-    public Pessoa(String nome, String email, String senha, String cpf, String sexo, String endereco, String cidade, String estado) {
-        this.nome = nome;
-        this.email = email;
-        this.senha = senha;
-        this.cpf = cpf;
-        this.sexo = sexo;
-        this.endereco = endereco;
-        this.cidade = cidade;
-        this.estado = estado;
-    }
 
     public int getId() {
         return id;
